@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Juvy M. Oba | Modern Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google Fonts: Poppins for modern look + Inter as fallback -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (free icons) -->
+    <title>Juvy M. Oba | Professional Portfolio</title>
+    <!-- Google Fonts: Clean serif + sans combo for formal elegance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -18,511 +16,449 @@
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            background: linear-gradient(145deg, #f8faff 0%, #f0f3fa 100%);
-            color: #1e2a41;
-            line-height: 1.5;
-            scroll-behavior: smooth;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f5f7fc;
+            color: #1e2f3e;
+            line-height: 1.55;
         }
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #e2e8f0;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2c5f9a;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #0d3c6e;
+        /* Formal, clean container structure */
+        .page-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+            min-height: 100vh;
         }
 
-        /* ===== MODERN PROFILE HERO SECTION ===== */
-        .hero {
-            background: linear-gradient(125deg, #0b2b44 0%, #103a5e 40%, #1b4f7a 100%);
-            color: white;
+        /* ===== HEADER / PROFILE SECTION - Formal & Elegant ===== */
+        .profile-header {
+            background: #ffffff;
+            padding: 2.5rem 3rem 1.8rem 3rem;
+            border-bottom: 1px solid #e9edf2;
             text-align: center;
-            padding: 4rem 2rem 3.5rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero::before {
-            content: "⚡";
-            font-size: 220px;
-            opacity: 0.06;
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            transform: rotate(8deg);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: "</>";
-            font-family: monospace;
-            font-size: 140px;
-            font-weight: bold;
-            opacity: 0.04;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            pointer-events: none;
-        }
-
-        .profile-container {
-            position: relative;
-            z-index: 2;
         }
 
         .profile-pic {
-            width: 160px;
-            height: 160px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 4px solid rgba(255,255,255,0.9);
             object-fit: cover;
-            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s;
-            background: #fff;
+            border: 4px solid #ffffff;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+            background: #f0f2f5;
         }
 
-        .profile-pic:hover {
-            transform: scale(1.02);
-            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.4);
-        }
-
-        .hero h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
+        .profile-header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin: 1rem 0 0.25rem;
+            color: #1a3a4f;
             letter-spacing: -0.3px;
-            background: linear-gradient(135deg, #ffffff, #cae9ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 0.3rem;
         }
 
         .title {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
-            opacity: 0.9;
-            background: rgba(255,255,255,0.15);
+            color: #4a6a7f;
+            background: #f0f4f9;
             display: inline-block;
             padding: 0.3rem 1.2rem;
-            border-radius: 40px;
-            backdrop-filter: blur(2px);
-            margin-top: 6px;
-        }
-
-        /* floating badge */
-        .tech-badge {
-            margin-top: 1.2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .tech-badge span {
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(4px);
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            border-radius: 30px;
             letter-spacing: 0.3px;
         }
 
-        /* ===== CARD SECTIONS ===== */
-        .section-card {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(0px);
-            margin: 2rem auto;
-            padding: 2rem 2rem 2.2rem;
-            width: 88%;
-            max-width: 950px;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0,0,0,0.02);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid rgba(255,255,255,0.5);
-        }
-
-        .section-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 28px 38px -14px rgba(0, 0, 0, 0.15);
-        }
-
-        .section-card h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #0f3b5c;
-            border-left: 6px solid #2c7ab1;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
+        .contact-info-mini {
+            margin-top: 1rem;
             display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-card h2 i {
-            color: #2c7ab1;
-            font-size: 1.6rem;
-        }
-
-        /* about text */
-        .about-text {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: #2c3e4e;
-            background: #f9fbfe;
-            padding: 1.2rem 1.5rem;
-            border-radius: 24px;
-            border: 1px solid #eef2f9;
-        }
-
-        /* modern table design */
-        .details-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: #ffffff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-        }
-
-        .details-table tr {
-            transition: background 0.2s;
-        }
-
-        .details-table tr:hover {
-            background: #f6fafe;
-        }
-
-        .details-table th, 
-        .details-table td {
-            padding: 1rem 1.2rem;
-            border-bottom: 1px solid #e6edf4;
-            text-align: left;
-            font-size: 0.98rem;
-        }
-
-        .details-table th {
-            background-color: #eef4fc;
-            color: #11517c;
-            font-weight: 700;
-            width: 140px;
-            border-right: 1px solid #e0e9f2;
-        }
-
-        .details-table td {
-            color: #1f3a4b;
-        }
-
-        .details-table tr:last-child th,
-        .details-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* skills modern badges */
-        .skills-container {
-            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #3c5a70;
+            border-top: 1px solid #eef2f7;
+            padding-top: 1rem;
         }
-        .skill-badge {
-            background: linear-gradient(115deg, #eef2ff, #e6edfc);
-            color: #135b8d;
-            padding: 0.6rem 1.3rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
+
+        .contact-info-mini span i {
+            margin-right: 6px;
+            color: #2c6280;
+            width: 18px;
+        }
+
+        /* ===== MAIN CONTENT: FORMAL SECTIONS ===== */
+        .main-content {
+            padding: 2rem 3rem 2.5rem 3rem;
+        }
+
+        /* Card-like sections but with clean borders & subtle spacing */
+        .section {
+            margin-bottom: 2.2rem;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 1.8rem;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a3a4f;
+            letter-spacing: -0.2px;
+            margin-bottom: 1.2rem;
+            display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            transition: all 0.2s;
-            border: 1px solid #cddff0;
-        }
-        .skill-badge i {
-            font-size: 1.1rem;
-            color: #2c7ab1;
-        }
-        .skill-badge:hover {
-            background: linear-gradient(115deg, #e0e9fc, #d9e4fa);
-            transform: translateY(-2px);
-            border-color: #9bb7d4;
+            border-left: 4px solid #2c6280;
+            padding-left: 1rem;
         }
 
-        /* inspiration box */
-        .inspiration-block {
-            background: linear-gradient(120deg, #f0f6fe, #ffffff);
-            padding: 1.5rem;
-            border-radius: 24px;
-            border-left: 6px solid #2c7ab1;
-            font-style: normal;
-            font-size: 1.05rem;
-            line-height: 1.65;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.02);
-        }
-
-        .inspiration-block i {
-            color: #f4b942;
-            margin-right: 10px;
+        .section-title i {
+            color: #2c6280;
             font-size: 1.3rem;
         }
 
-        /* footer */
-        .custom-footer {
-            background: #0b2b44;
-            color: #d9e6f5;
-            text-align: center;
-            padding: 2rem 1.5rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+        /* About text - formal, clean */
+        .about-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #2c4153;
+            background: #fbfdff;
+            padding: 0.2rem 0;
         }
 
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
+        /* Formal table design (elegant borders) */
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        .details-table tr {
+            border-bottom: 1px solid #eef2f8;
+        }
+
+        .details-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .details-table th {
+            text-align: left;
+            padding: 0.9rem 1rem 0.9rem 0;
+            width: 140px;
+            font-weight: 600;
+            color: #1a3a4f;
+            vertical-align: top;
+        }
+
+        .details-table td {
+            padding: 0.9rem 0;
+            color: #2f4a60;
+        }
+
+        /* Skills: clean badge list (formal but modern) */
+        .skills-list {
+            list-style: none;
+            padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
             flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
         }
 
-        .footer-content p {
-            margin: 0;
+        .skills-list li {
+            background: #f0f4fa;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1f4e6e;
+            letter-spacing: 0.2px;
+            border: 1px solid #e2eaf1;
         }
 
-        .footer-heart {
-            color: #ff8c8c;
+        /* Inspiration block - formal quote style */
+        .inspiration-block {
+            background: #fafcfe;
+            padding: 1.2rem 1.6rem;
+            border-left: 4px solid #2c6280;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #2c3e4f;
+            margin-top: 0.5rem;
         }
 
-        .social-links {
-            margin-top: 0.6rem;
+        /* Extra formal: mission row */
+        .mission-grid {
             display: flex;
-            justify-content: center;
-            gap: 1.2rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 0.8rem;
         }
-        .social-links a {
-            color: #cae3f5;
-            transition: color 0.2s, transform 0.2s;
-            font-size: 1.2rem;
+        .mission-card {
+            flex: 1;
+            min-width: 160px;
+            background: #fafdff;
+            border: 1px solid #e9eff5;
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
+            transition: all 0.2s;
         }
-        .social-links a:hover {
-            color: white;
-            transform: scale(1.1);
+        .mission-card h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #1a3a4f;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mission-card p {
+            font-size: 0.85rem;
+            color: #4c6a80;
+            line-height: 1.4;
         }
 
-        /* responsive */
-        @media (max-width: 680px) {
-            .hero h1 {
-                font-size: 1.9rem;
+        /* Footer: formal & minimal */
+        .formal-footer {
+            background: #f8fafd;
+            border-top: 1px solid #e2e9f0;
+            padding: 1.5rem 3rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #5b7388;
+        }
+
+        .formal-footer a {
+            color: #2c6280;
+            text-decoration: none;
+        }
+
+        .formal-footer a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eef2f8;
+            margin: 0.8rem 0;
+        }
+
+        /* responsiveness */
+        @media (max-width: 750px) {
+            .main-content {
+                padding: 1.5rem 1.8rem;
             }
-            .section-card {
-                padding: 1.5rem;
-                width: 92%;
+            .profile-header {
+                padding: 2rem 1.5rem;
+            }
+            .profile-header h1 {
+                font-size: 1.8rem;
             }
             .details-table th, 
             .details-table td {
-                padding: 0.8rem;
-                display: table-cell;
-            }
-            .skill-badge {
-                font-size: 0.8rem;
-                padding: 0.4rem 1rem;
-            }
-            .section-card h2 {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 550px) {
-            .details-table, .details-table tbody, .details-table tr, .details-table th, .details-table td {
                 display: block;
+                padding: 0.5rem 0;
             }
             .details-table th {
                 width: 100%;
-                border-right: none;
-                background: #e4edf7;
-                border-bottom: 1px solid #d0e0ef;
+                padding-bottom: 0;
             }
             .details-table td {
-                border-bottom: 1px solid #eef2f8;
+                padding-top: 0;
+                padding-bottom: 0.8rem;
             }
             .details-table tr {
-                margin-bottom: 0.5rem;
-                border: 1px solid #e2edf7;
-                border-radius: 20px;
+                display: block;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid #eef2f8;
+            }
+            .section-title {
+                font-size: 1.3rem;
             }
         }
 
-        /* smooth hover animation for cards */
-        .section-card {
-            transition: all 0.25s ease-in-out;
+        @media (max-width: 500px) {
+            .main-content {
+                padding: 1.2rem;
+            }
+            .contact-info-mini {
+                flex-direction: column;
+                gap: 0.4rem;
+                align-items: center;
+            }
         }
 
-        /* decorative line */
-        .profile-quote {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            font-weight: 400;
-            opacity: 0.85;
+        /* subtle hover for mission cards */
+        .mission-card:hover {
+            background: #ffffff;
+            border-color: #cddfed;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        /* email link style */
+        a.email-link {
+            color: #2c6280;
+            text-decoration: none;
+            border-bottom: 1px dotted #bdd4e4;
+        }
+        a.email-link:hover {
+            color: #124263;
+            border-bottom-color: #2c6280;
+        }
+
+        /* clean image fallback */
+        .profile-pic {
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-
-    <!-- HERO / PROFILE SECTION (modern redesign) -->
-    <div class="hero">
-        <div class="profile-container">
-            <!-- Placeholder image: if juvy.jpg missing, show modern avatar placeholder with initials -->
-            <img src="juvy.jpg" alt="Juvy M. Oba profile" class="profile-pic" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?background=1e4a76&color=fff&bold=true&size=160&name=Juvy+Oba&rounded=true';">
-            <h1>Juvy M. Oba</h1>
-            <div class="title">
-                <i class="fas fa-laptop-code" style="margin-right: 6px;"></i> Aspiring IT Professional
-            </div>
-            <div class="tech-badge">
-                <span><i class="fas fa-code"></i> HTML/CSS</span>
-                <span><i class="fas fa-drafting-compass"></i> Canva Designer</span>
-                <span><i class="fas fa-rocket"></i> Problem Solver</span>
-            </div>
-            <div class="profile-quote">
-                <i class="fas fa-quote-left"></i>  building digital bridges, one line of code at a time
-            </div>
+<div class="page-container">
+    <!-- PROFILE HEADER: Formal, clean, professional -->
+    <header class="profile-header">
+        <!-- profile image with fallback -->
+        <img src="juvy.jpg" alt="Juvy M. Oba - Professional Portrait" class="profile-pic" 
+             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?background=CCE3F0&color=1a3a4f&bold=true&size=140&name=JUVY+OBA&rounded=true&fontsize=0.33';">
+        <h1>Juvy M. Oba</h1>
+        <div class="title">Bachelor of Science in Information Technology</div>
+        <div class="contact-info-mini">
+            <span><i class="fas fa-map-marker-alt"></i> Guimba, Nueva Ecija</span>
+            <span><i class="fas fa-envelope"></i> obajuvymariano@gmail.com</span>
+            <span><i class="fas fa-calendar-alt"></i> 19 years old</span>
         </div>
+    </header>
+
+    <div class="main-content">
+        <!-- ABOUT ME - Formal tone -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-user-graduate"></i> 
+                <h2>About Me</h2>
+            </div>
+            <div class="about-text">
+                <p>I am Juvy M. Oba, a dedicated IT student at <strong>Our Lady of the Sacred Heart College of Guimba, Inc.</strong> 
+                pursuing a Bachelor of Science in Information Technology. I possess a strong enthusiasm for technology, 
+                particularly in web development, system analysis, and digital solutions. My academic journey has equipped me 
+                with foundational knowledge in programming and design, and I am committed to continuous learning and professional 
+                growth. I aim to leverage my skills to develop efficient, user-centric systems that address real-world needs.</p>
+            </div>
+        </section>
+
+        <!-- PERSONAL DETAILS - Formal table presentation -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-id-card"></i>
+                <h2>Personal Details</h2>
+            </div>
+            <table class="details-table">
+                <tbody>
+                    <tr>
+                        <th>Full Name</th>
+                        <td>Juvy Mariano Oba</td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>September 12, 2006</td>
+                    </tr>
+                    <tr>
+                        <th>Email Address</th>
+                        <td><a href="mailto:obajuvymariano@gmail.com" class="email-link">obajuvymariano@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <th>Residence</th>
+                        <td>Guimba, Nueva Ecija, Philippines</td>
+                    </tr>
+                    <tr>
+                        <th>Student Status</th>
+                        <td>Undergraduate, BS Information Technology</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SKILLS & PROGRAMMING LANGUAGES - formal badge style -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-code"></i>
+                <h2>Skills & Technical Proficiencies</h2>
+            </div>
+            <ul class="skills-list">
+                <li><i class="fab fa-html5" style="margin-right: 6px;"></i> HTML5 (Beginner)</li>
+                <li><i class="fab fa-css3-alt" style="margin-right: 6px;"></i> CSS3 (Beginner)</li>
+                <li><i class="fab fa-js" style="margin-right: 6px;"></i> JavaScript (Beginner)</li>
+                <li><i class="fas fa-paintbrush" style="margin-right: 6px;"></i> Canva Design (Intermediate)</li>
+                <li><i class="fas fa-wrench" style="margin-right: 6px;"></i> Basic Computer Troubleshooting</li>
+                <li><i class="fas fa-database" style="margin-right: 6px;"></i> SQL Fundamentals (Learning)</li>
+                <li><i class="fas fa-file-excel" style="margin-right: 6px;"></i> MS Office Suite</li>
+            </ul>
+            <hr>
+            <p style="font-size: 0.85rem; color: #4a6f8a; margin-top: 0.5rem;"><i class="fas fa-chalkboard-user"></i> Currently enhancing front-end development and logical problem-solving through project-based learning.</p>
+        </section>
+
+        <!-- INSPIRATION AS A PROGRAMMER - formal & reflective -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                <h2>Professional Inspiration</h2>
+            </div>
+            <div class="inspiration-block">
+                <p><strong>Why I chose the IT field:</strong> I believe technology is a catalyst for progress. My passion for programming 
+                stems from the desire to design functional, accessible, and impactful digital tools. As an aspiring IT professional, 
+                I am inspired by the endless possibilities of software development — from automating routine tasks to creating 
+                platforms that empower communities. I am particularly drawn to web technologies because they bridge gaps and 
+                connect people. By mastering programming languages and system design, I aim to contribute meaningfully to the 
+                tech industry and help solve everyday challenges through innovation.</p>
+                <p style="margin-top: 0.8rem;"><i class="fas fa-quote-left" style="margin-right: 5px; color:#5b8db0;"></i> Every line of code is an opportunity to learn, improve, and make a difference.</p>
+            </div>
+        </section>
+
+        <!-- ACADEMIC & CAREER OBJECTIVES - Formal additional info -->
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-chart-line"></i>
+                <h2>Academic & Career Objectives</h2>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Short-term</h4>
+                    <p>Complete my BSIT program with high distinction, earn certifications in front-end development, and build a solid portfolio of projects.</p>
+                </div>
+                <div class="mission-card">
+                    <h4><i class="fas fa-bullseye"></i> Mid-term</h4>
+                    <p>Secure an internship or junior developer role to gain hands-on industry experience and contribute to real-world software teams.</p>
+                </div>
+                <div class="mission-card">
+                    <h4><i class="fas fa-globe"></i> Long-term</h4>
+                    <p>Become a full-stack developer or IT consultant, leading innovative projects that drive digital transformation in my local community and beyond.</p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- ABOUT SECTION -->
-    <div class="section-card">
-        <h2>
-            <i class="fas fa-user-astronaut"></i> 
-            About Me
-        </h2>
-        <div class="about-text">
-            <i class="fas fa-graduation-cap" style="color: #2c7ab1; margin-right: 12px;"></i> 
-            Hi! I am <strong>Juvy M. Oba</strong>, an IT student at <strong>Our Lady of the Sacred Heart College of Guimba, Inc.</strong> 
-            Currently pursuing a Bachelor of Science in Information Technology. I’m passionate about technology — from crafting 
-            user-friendly websites to understanding how systems work under the hood. I’m always eager to learn new tools, 
-            improve my craft, and eventually build solutions that make a real impact.
+    <!-- FOOTER - Formal, minimal and elegant -->
+    <footer class="formal-footer">
+        <div>© 2026 Juvy M. Oba — All Rights Reserved</div>
+        <div style="margin-top: 0.4rem; font-size: 0.75rem;">
+            <i class="fas fa-envelope"></i> <a href="mailto:obajuvymariano@gmail.com">obajuvymariano@gmail.com</a> &nbsp;|&nbsp; 
+            <i class="fas fa-map-pin"></i> Guimba, Nueva Ecija, Philippines
         </div>
-    </div>
-
-    <!-- PERSONAL DETAILS (Modern table style) -->
-    <div class="section-card">
-        <h2>
-            <i class="fas fa-id-card"></i> 
-            Personal Details
-        </h2>
-        <table class="details-table">
-            <tr>
-                <th><i class="fas fa-user-circle"></i> Full Name</th>
-                <td>Juvy M. Oba</td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-cake-candles"></i> Age</th>
-                <td>19</td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-envelope"></i> Email</th>
-                <td><a href="mailto:obajuvymariano@gmail.com" style="color:#1f6392; text-decoration: none;">obajuvymariano@gmail.com</a></td>
-            </tr>
-            <tr>
-                <th><i class="fas fa-map-pin"></i> Address</th>
-                <td>Guimba, Nueva Ecija, Philippines</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- SKILLS / PROGRAMMING LANGUAGES with modern badges -->
-    <div class="section-card">
-        <h2>
-            <i class="fas fa-cogs"></i> 
-            Tech Stack & Skills
-        </h2>
-        <div class="skills-container">
-            <div class="skill-badge"><i class="fab fa-html5"></i> HTML5 — Beginner</div>
-            <div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3 — Beginner</div>
-            <div class="skill-badge"><i class="fab fa-js"></i> JavaScript — Beginner</div>
-            <div class="skill-badge"><i class="fas fa-palette"></i> Canva Designing — Intermediate</div>
-            <div class="skill-badge"><i class="fas fa-desktop"></i> Basic Computer Troubleshooting — Beginner</div>
-            <div class="skill-badge"><i class="fas fa-database"></i> SQL (Fundamentals) — Learning</div>
+        <div style="margin-top: 0.8rem;">
+            <span style="letter-spacing: 0.5px;">Bachelor of Science in Information Technology</span>
         </div>
-        <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #4a627a; border-top: 1px solid #e9eff6; padding-top: 1rem;">
-            <i class="fas fa-chart-line"></i> Continuously upskilling through hands-on projects & online courses.
-        </p>
-    </div>
-
-    <!-- INSPIRATION SECTION (enhanced) -->
-    <div class="section-card">
-        <h2>
-            <i class="fas fa-lightbulb"></i> 
-            Inspiration as a Programmer
-        </h2>
-        <div class="inspiration-block">
-            <i class="fas fa-quote-right" style="float: right; opacity: 0.4;"></i>
-            <p>✨ I believe that technology has the power to simplify lives and bridge gaps. What drives me as a future 
-            developer is the desire to build <strong>useful websites and systems</strong> that can help communities, businesses, 
-            and everyday people. Choosing IT wasn't just about career opportunities — it’s about being part of the digital 
-            revolution. Every line of code is a step toward solving real-world challenges, and that keeps me curious, 
-            motivated, and excited for the future.</p>
-            <div style="margin-top: 1rem; font-weight: 500; color: #135b8d;">
-                <i class="fas fa-brain"></i>  “Code is poetry, and I'm learning to write my verse.”
-            </div>
-        </div>
-    </div>
-
-    <!-- Extra: Vision / Goals mini section (optional but adds personality) -->
-    <div class="section-card">
-        <h2>
-            <i class="fas fa-chart-simple"></i> 
-            My Vision
-        </h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
-            <div style="flex:1; min-width: 180px; background: #fafcff; border-radius: 20px; padding: 1rem; border: 1px solid #e2edfc;">
-                <i class="fas fa-graduation-cap" style="font-size: 1.6rem; color: #2c7ab1;"></i>
-                <h3 style="margin: 0.5rem 0 0.2rem; font-size: 1rem;">Academic Growth</h3>
-                <p style="font-size: 0.85rem;">Excel in my IT program and gain certifications in web development.</p>
-            </div>
-            <div style="flex:1; min-width: 180px; background: #fafcff; border-radius: 20px; padding: 1rem; border: 1px solid #e2edfc;">
-                <i class="fas fa-briefcase" style="font-size: 1.6rem; color: #2c7ab1;"></i>
-                <h3 style="margin: 0.5rem 0 0.2rem; font-size: 1rem;">Career Goal</h3>
-                <p style="font-size: 0.85rem;">Become a full-stack developer & IT consultant for meaningful projects.</p>
-            </div>
-            <div style="flex:1; min-width: 180px; background: #fafcff; border-radius: 20px; padding: 1rem; border: 1px solid #e2edfc;">
-                <i class="fas fa-heart" style="font-size: 1.6rem; color: #f4b942;"></i>
-                <h3 style="margin: 0.5rem 0 0.2rem; font-size: 1rem;">Community Impact</h3>
-                <p style="font-size: 0.85rem;">Develop open-source tools that help local schools and small businesses.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer class="custom-footer">
-        <div class="footer-content">
-            <p>© 2026 Juvy M. Oba | <i class="fas fa-code footer-heart"></i> Built with passion & modern design</p>
-        </div>
-        <div class="social-links">
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:obajuvymariano@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p style="margin-top: 1rem; font-size: 0.75rem; opacity: 0.7;">
-            <i class="fas fa-laptop"></i> Portfolio | Aspiring IT Professional
-        </p>
     </footer>
-
-    <!-- small script for dynamic year? but static is fine, but we preserve integrity -->
+</div>
 </body>
 </html>
